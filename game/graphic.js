@@ -34,7 +34,7 @@ function init()
 
 function Ground(color, size_x, size_y, nb_tile)
 {
-    colors = Array(0xffffff, 0x0000FF, 	0xFF0000, 0x000000);
+    colors = Array(0xffffff, 0x0000FF, 	0xFF0000, 0x777777);
 
     sizeOfTileX = size_x / nb_tile;
     minX = -(size_x/2);
@@ -51,8 +51,6 @@ function Ground(color, size_x, size_y, nb_tile)
 
             color = colors[Math.floor(Math.random()*colors.length)];
        
-            if (0x000000 != color)
-            {
                 if (!created){
                     player1 = new Player("player1", 0xffff00, new THREE.Vector2(x, y), 0);
                     scene.add(player1.graphic);
@@ -64,9 +62,6 @@ function Ground(color, size_x, size_y, nb_tile)
                 tmpGround.position.x = x;
                 tmpGround.position.y = y;
                 scene.add(tmpGround);
-            }
-            else
-                noGround.push([x, y]);
         }
     }
 }

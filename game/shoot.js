@@ -72,9 +72,15 @@ function ennemy_collision(){
     var y = ennemy1.graphic.position.y + HEIGHT / 2;
 
     if ( x < 0 || x > WIDTH)
+    {
         ennemy1.speed = -ennemy1.speed;
+        ennemy1.direction += 180;
+    }
     if ( y < 0 || y > HEIGHT)
+    {
         ennemy1.speed = -ennemy1.speed;
+        ennemy1.direction += 180;
+    }
 }
 
 
